@@ -91,7 +91,13 @@
 .reveal section > h2 {
   font-weight: 500;
   font-size: 1.7em;
-  color: var(--bs-gray);
+  /* color: var(--bs-gray); */
+  color: white;
+  background-color: chocolate;
+  font-size: 1em;
+  padding: 4px 8px;
+  position: absolute;
+  left:0
 }
 
 .reveal section > h3 {
@@ -646,10 +652,13 @@ h3::selection {
 }
 
 footer.fadein {
-  opacity: 1;
+  opacity: .4;
   animation-name: fadein;
   animation-timing-function: ease-out;
   animation-duration: 0.5s;
+}
+footer.fadein a {
+  text-decoration: none;
 }
 
 footer.fadeout {
