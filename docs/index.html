@@ -30,6 +30,12 @@
   <body spellcheck="false">
     <div class="reveal">
       <div class="slides">
+        <!-- <section>
+          <p class ="fragment" data-audio-src="audios/song.mp3">
+            Listen to the song
+          </p>
+        </section> -->
+        
         <section
           data-markdown="slides/demo.md"
           data-separator="\n---\n"
@@ -84,6 +90,10 @@
     <script src="js/plugin/menu/menu.js"></script>
     <script src="js/plugin/chart/Chart.min.js"></script>
     <script src="js/plugin/chart/plugin.js"></script>
+<!-- 
+    <script src="js/plugin/audio-slideshow/plugin.js"></script>
+    <script src="js/plugin/audio-slideshow/recorder.js"></script>
+    <script src="js/plugin/audio-slideshow/RecordRTC.js"></script> -->
 
     <script>
       Reveal.initialize({
@@ -96,6 +106,8 @@
           RevealZoom,
           RevealMenu,
           RevealChart,
+          // RevealAudioSlideshow, 
+          // RevealAudioRecorder
         ],
         menu: {
           transitions: false,
@@ -115,26 +127,43 @@
         controls: false,
         progress: false,
         rollingLinks: false,
+
+        // audio: {
+        //   prefix: 'audios/', 	    // audio files are stored in the "audio" folder
+        //   // suffix: '.ogg',		      // audio files have the ".ogg" ending
+        //   suffix: '.mp3',		      // audio files have the ".ogg" ending
+        //   textToSpeechURL: null,  // the URL to the text to speech converter
+        //   defaultNotes: false, 	  // use slide notes as default for the text to speech converter
+        //   defaultText: false, 	  // use slide text as default for the text to speech converter
+        //   advance: 0, 		        // advance to next slide after given time in milliseconds after audio has played, use negative value to not advance
+        //   autoplay: true,	      // automatically start slideshow
+        //   defaultDuration: 5,	    // default duration in seconds if no audio is available
+        //   defaultAudios: true,	  // try to play audios with names such as audio/1.2.ogg
+        //   playerOpacity: 0.05,	  // opacity value of audio player if unfocused
+        //   playerStyle: 'position: fixed; bottom: 4px; left: 25%; width: 50%; height:75px; z-index: 33;', // style used for container of audio controls
+        //   startAtFragment: false, // when moving to a slide, start at the current fragment or at the start of the slide
+        // }
       })
 
-      //Add Keyboard Shortcuts
-      Reveal.configure({
-        keyboard: {
-          // hide footer using the t key
-          84: () => {
-            var myNode = document.querySelector('.footer')
-            myNode.classList.toggle('fadeout')
-          },
-        },
-      })
+      // //Add Keyboard Shortcuts
+      // Reveal.configure({
+      //   keyboard: {
+      //     // hide footer using the t key
+      //     84: () => {
+      //       var myNode = document.querySelector('.footer')
+      //       myNode.classList.toggle('fadeout')
+      //     },
+      //   },
+      // })
 
       // When Reveal.js has finished loading
       Reveal.on('ready', (event) => {
-        //Modify all the PRE>CODE tags so they have line numbers
-        let preCodeNodes = document.querySelectorAll('pre code')
-        preCodeNodes.forEach(function (item) {
-          item.dataset.lineNumbers = true
-        }, this)
+
+        // //Modify all the PRE>CODE tags so they have line numbers
+        // let preCodeNodes = document.querySelectorAll('pre code')
+        // preCodeNodes.forEach(function (item) {
+        //   item.dataset.lineNumbers = true
+        // }, this)
 
         //Add a fragment class to all list items by default
         let fragmentNodes = document.querySelectorAll(
