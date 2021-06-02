@@ -1,12 +1,12 @@
 <!-- .slide: data-state="layout-title" data-background-image="../images/bg.jpg" -->
 
 ## 康复进度
-
 <div>
-<p class="text-dark p-4">- 在手机上向左右扫动<br>
-- 在电脑上使用左右键</p>
+  <p class="text-dark p-4">- 在手机上向左右扫动<br>
+  - 在电脑上使用左右键
 
-![image](images/yoga.png)
+  ![image](images/yoga.png)
+  </p>
 </div>
 
 ---
