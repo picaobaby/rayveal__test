@@ -5,7 +5,7 @@
  <p class="text-dark p-4">- 在手机上向左右扫动<br>
 - 在电脑上使用左右键</p>
 
-![image](images/walking.gif)
+![image](images/yoga.png)
 
 ---
 
